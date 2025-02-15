@@ -1,0 +1,46 @@
+.navbar{
+    margin: 4rem;
+    border: 2px solid #05252C ;
+    border-radius: 0.5rem;
+    background-color: transparent;
+    font-family: "Roboto" sans-serif;
+    .nav{
+        padding: 0.4rem;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1.5em;
+        .nav_one{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+        }
+        ul{
+            gap: 3rem;
+            list-style: none;
+            .one{
+                color: #ffffff;
+                font-size: small;
+            }
+            .two{
+                color: #B3B3B3;
+                font-size: small;
+            }
+        }
+        .nav_two{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.15rem;
+            border: 2px solid #ffffff ;
+            border-radius: 0.5rem;
+            background-color: #ffffff;
+            color: #0A0C11;
+            padding: 5px;
+        }
+    }
+    
+}
