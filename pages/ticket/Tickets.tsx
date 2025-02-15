@@ -8,7 +8,13 @@ import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import Script from "next/script"; 
 import styles from "./tickets.module.css";
+import { Cloudinary } from "@cloudinary/url-gen";
 
+declare global {
+  interface Window {
+    cloudinary?: Cloudinary;
+  }
+}
 
 const schema = yup.object().shape({
   fullName: yup.string().required("Full Name is required"),
@@ -21,6 +27,7 @@ type FormData = {
   email: string;
   avatarUrl: string;
 };
+
 
 const Tickets = () => {
     const router = useRouter();
@@ -80,7 +87,7 @@ const Tickets = () => {
 }
    
     const openUploadWidget = () => {
-        if (typeof window !== "undefined" && (window as any).cloudinary) {
+      if (typeof window !== "undefined" && window.cloudinary) {
           const cloudinary = (window as unknown as { 
             cloudinary: { 
               createUploadWidget: (
